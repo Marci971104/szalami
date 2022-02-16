@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFelvagottTable extends Migration
+class CreateFelvagottsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateFelvagottTable extends Migration
      */
     public function up()
     {
-        Schema::create('felvagott', function (Blueprint $table) {
+        Schema::create('felvagotts', function (Blueprint $table) {
             $table->increments("id");
             $table->string("termek_neve");
             $table->string("termek_ara");
@@ -30,6 +30,6 @@ class CreateFelvagottTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('felvagott');
+        Schema::dropIfExists('felvagotts');
     }
 }
